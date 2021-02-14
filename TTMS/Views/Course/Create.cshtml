@@ -1,4 +1,4 @@
-﻿@model TMS.Models.Course
+﻿@model TTMS.ViewModels.CourseCategoriesViewModel
 @{
     ViewBag.Title = "Create";
 }
@@ -8,20 +8,20 @@
 @using (Html.BeginForm("Create", "Course", "POST"))
 {
     <div class="form-group">
-        @Html.LabelFor(model => model.Name)
-        @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
-        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+        @Html.LabelFor(model => model.Course.Name)
+        @Html.TextBoxFor(model => model.Course.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Course.Name, "", new { @class = "text-danger" })
     </div>
     <div class="form-group">
-        @Html.LabelFor(model => model.Categogy)
-        @Html.TextBoxFor(model => model.Categogy, new { @class = "form-control" })
-        @Html.ValidationMessageFor(model => model.Categogy, "", new { @class = "text-danger" })
+        @Html.LabelFor(model => model.Course.Categogy)
+        @Html.TextBoxFor(model => model.Course.Categogy, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Course.Categogy, "", new { @class = "text-danger" })
 
     </div>
     <div class="form-group">
-        @Html.LabelFor(model => model.Description)
-        @Html.TextBoxFor(model => model.Description, new { @class = "form-control" })
-        @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+        @Html.LabelFor(model => model.Course.Description)
+        @Html.TextBoxFor(model => model.Course.Description, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Course.Description, "", new { @class = "text-danger" })
     </div>
 
     <div class="form-group">

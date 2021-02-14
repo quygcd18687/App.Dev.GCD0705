@@ -4,7 +4,7 @@
 }
 
 <h2>Manage Course</h2>
-<h3 class="btn btn-primary">@Html.ActionLink("Create Course", "Create", "Course")</h3>
+<h3 class="btn btn-default" style="margin-bottom: 7px;">@Html.ActionLink("Create Course", "Create", "Course")</h3>
 
 <table class="table table-bordered">
     <thead>
@@ -13,6 +13,7 @@
             <td>Name</td>
             <td>Category</td>
             <td>Description</td>
+            <td>Actions</td>
         </tr>
 
     </thead>
@@ -25,7 +26,10 @@
                 <td>@item.Name</td>
                 <td>@item.Categogy</td>
                 <td>@item.Description</td>
-
+                <td>
+                    @Html.ActionLink("Edit","Edit","Course", new {id = item.Id } ,new {@class = "btn btn-primary" })
+                    @Html.ActionLink("Delete","Delete","Course",new {id = item.Id } , new {@class = "btn btn-danger" })
+                </td>
             </tr>
         }
     </tbody>
